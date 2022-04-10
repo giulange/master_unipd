@@ -9,13 +9,21 @@ pswd   <- 'Car2019'
 dbname <- 'CAR'
 
 # connection #
-try( connection  <- dbConnect(drv,
-                              host = host,
-                              port = port, 
-                              user = user,
-                              password = pswd,
-                              dbname = dbname) # schema = 'public'
-)
+# try( connection  <- dbConnect(drv,
+#                               host = host,
+#                               port = port, 
+#                               user = user,
+#                               password = pswd,
+#                               dbname = dbname) # schema = 'public'
+# )
+connection  <- dbConnect(drv,
+                         host = host,
+                         port = port,
+                         user = user,
+                         password = pswd,
+                         dbname = dbname) # schema = 'public'
+
+
 
 # list tables
 tbl_ls <- dbListTables(connection)
@@ -41,9 +49,17 @@ rain <- dbGetQuery(connection,qry_h24)
 dbDisconnect(connection)
 rm(connection,drv,dbname,host,port,pswd,qry_h24,tbl_ls,user)
 
+write.csv(rain,"rain_daily.csv",row.names = FALSE)
+
+setwd("/didattica/docente_Langella/env/master_unipd/")
+rain <- read.csv("rain_daily.csv")
+
 # create a vector geodata model
 require(sf)
-r <- st_as_sf(rain,coords = c("Station Longitude","Station Latitude"),crs=4326)
+r <- st_as_sf(rain,coords = c("Station.Longitude","Station.Latitude"),crs=4326)
+
+class(rain)
+class(r)
 
 require(tmap)
 tmap_mode("view")
@@ -54,5 +70,10 @@ tm_shape(r) +
   tm_layout(title="Rainfall on 2022-Mar-19")
 
 st_write(r,"rain_daily.geojson")
+
+
+library(gstat)
+require(gstat)
+
 
 

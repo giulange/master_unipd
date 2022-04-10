@@ -70,6 +70,8 @@ format(r_m10$Timestamp[250],"%Y-%m-%d %H:%M")
 
 require(dplyr)
 
+
+
 # Select specific time:
 r_sel <- r_m10 %>% 
   filter(Timestamp == as.POSIXct("2022-03-19 00:10:00"))
@@ -89,6 +91,11 @@ r_tot <- r_m10 %>%
   group_by(Name) %>%
   summarise( lon = mean(Longitude), lat = mean(Latitude), elev = mean(Elevation), tot = sum(Value) )
 head(r_tot)
+
+r_tot <- r_m10 %>%
+  group_by(Name) %>%
+  summarise( tot = sum(Value) )
+
 
 r_tot %>% 
   filter(tot > 4.0)

@@ -45,6 +45,16 @@ ls()
 #     c()
 c(1,3,6,9,11)
 
+birth <- c(30,08,1977)
+
+# y = a + b*x
+a = 0.04
+b = 1.06
+x = 1:100
+y = a + b*x
+
+plot(x,y)
+
 #     generatore di "n" valori da una distribuzione normale, con media "mean" e dev.st. "sd"
 rnorm(n=100, mean=0, sd=1)
 
@@ -128,6 +138,8 @@ v5 <- c(1,2L,"Hello")
 v5
 class(v5)
 
+v5 <- c(1,2L,"Hello")
+v6 = c(1,2L,"Hello")
 
 #     Coercion
 v4
