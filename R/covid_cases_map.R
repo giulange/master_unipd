@@ -17,6 +17,7 @@ plot_today_c19_totcases <- function(Date='latest'){
   c19_na <- c19[-na_idx,]
   c19_sf <- st_as_sf( c19_na, coords = c("long","lat"), crs=4326 )
   
+  tmap_mode("view")
   tm_shape(c19_sf) + 
     tm_bubbles(size=0.3,col = "totale_casi") + 
     tm_layout(title=Date )
@@ -24,7 +25,7 @@ plot_today_c19_totcases <- function(Date='latest'){
 }
 
 # creare la mappa geospaziale dei contagi per un giorno specifico:
-plot_today_c19_totcases("20200225")
+plot_today_c19_totcases("20200420")
 
 # creare la mappa geospaziale dei contagi alla situazione più recente:
 plot_today_c19_totcases()

@@ -54,6 +54,7 @@ x = 1:100
 y = a + b*x
 
 plot(x,y)
+plot(x,y,pch='.')
 
 #     generatore di "n" valori da una distribuzione normale, con media "mean" e dev.st. "sd"
 rnorm(n=100, mean=0, sd=1)
@@ -103,7 +104,7 @@ args(round)
 
 
 # 11. Funzioni, creazione dall’utente: esempi sui dati covid
-
+#     Vedremo dopo alcuni esempi.
 
 # 12. Packages
 #     install.packages()

@@ -1,3 +1,4 @@
+# PSQL ====
 require(RPostgreSQL)
 
 #   -- URCoFi PROD
@@ -45,8 +46,8 @@ rm(connection,drv,dbname,host,port,pswd,qry_m10,tbl_ls,user)
 # save dataset
 write.csv(r_m10,"rain_m10.csv",row.names=FALSE)
 
-# read csv
-# r_m10 <- read.csv("rain_m10.csv")
+# read csv ====
+r_m10 <- read.csv("rain_m10.csv")
 
 # explore dataset
 class(r_m10)
@@ -57,20 +58,16 @@ plot(r_m10$Value)
 
 hist(r_m10$Value)
 
-barplot(r_m10$Value)
-
-plot(density(r_m10$Value))
-
+r_m10[1,1]
+r_m10$Timestamp
 
 # explore date format as read from PSQL DB
 class(r_m10$Timestamp)
 
 r_m10$Timestamp[250]
-format(r_m10$Timestamp[250],"%Y-%m-%d %H:%M")
+as.POSIXct(r_m10$Timestamp[250],format="%Y-%m-%d %H:%M")
 
 require(dplyr)
-
-
 
 # Select specific time:
 r_sel <- r_m10 %>% 
