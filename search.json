@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Geodata & Geostatistics in R",
+    "section": "",
+    "text": "Prof. Giuliano Langella     glangella@unina.it\n\n\n\n\n\n\nAppelhans, Tim, Florian Detsch, Christoph Reudenbach, and Stefan Woellauer. 2022. Mapview: Interactive Viewing of Spatial Data in r. https://github.com/r-spatial/mapview.\n\n\nHijmans, Robert J. 2024. Terra: Spatial Data Analysis. https://rspatial.org/.\n\n\nPebesma, Edzer. 2018. “Simple Features for R: Standardized Support for Spatial Vector Data.” The R Journal 10 (1): 439–46. https://doi.org/10.32614/RJ-2018-009.\n\n\n———. 2023a. Sf: Simple Features for r. https://r-spatial.github.io/sf/.\n\n\n———. 2023b. Stars: Spatiotemporal Arrays, Raster and Vector Data Cubes. https://r-spatial.github.io/stars/.\n\n\nPebesma, Edzer, and Roger Bivand. 2023a. Spatial Data Science: With applications in R. Chapman and Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\n———. 2023b. Spatial Data Science: With applications in R. London: Chapman; Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\nPebesma, Edzer, Thomas Mailund, and James Hiebert. 2016. “Measurement Units in R.” R Journal 8 (2): 486–94. https://doi.org/10.32614/RJ-2016-061.\n\n\nPebesma, Edzer, Thomas Mailund, Tomasz Kalinowski, and Iñaki Ucar. 2023. Units: Measurement Units for r Vectors. https://r-quantities.github.io/units/.\n\n\nR Core Team. 2023. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.R-project.org/.\n\n\nTennekes, Martijn. 2018. “tmap: Thematic Maps in R.” Journal of Statistical Software 84 (6): 1–39. https://doi.org/10.18637/jss.v084.i06.\n\n\n———. 2023. Tmap: Thematic Maps. https://github.com/r-tmap/tmap.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2024. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://ggplot2.tidyverse.org.\n\n\nXie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In Implementing Reproducible Computational Research, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC.\n\n\n———. 2015. Dynamic Documents with R and Knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. https://yihui.org/knitr/.\n\n\n———. 2024. Knitr: A General-Purpose Package for Dynamic Report Generation in r. https://yihui.org/knitr/."
+  },
+  {
+    "objectID": "Lecture_01.html#b01-intro-to-r",
+    "href": "Lecture_01.html#b01-intro-to-r",
+    "title": "1  R & Geodata",
+    "section": "1.1 [B01] Intro to R",
+    "text": "1.1 [B01] Intro to R\n^ TOP ^\nHands-on programming with R, free online book\n\nAppendix A, Install\nAppendix B, C, R packages management\nAppendix D, Load & save data using R\nChapter 2, R Basics\nChapter 5, R Objects\n\n\n\nIntroduction to RStudio IDE > main panels: console, source, plot, environment, files, packages, history\n\nRStudio – Basic operations\n\nbasic_operations_in_R.R\n\nEsercizio\n\npuntare il pannello Files sulla cartella master_unipd\ncreare un oggetto numerico di 3 elementi inserendo il giorno, mese ed anno di nascita\ncreare un oggeto character di due (o più elementi) in cui inserire il proprio nome e cognome"
+  },
+  {
+    "objectID": "Lecture_01.html#b02-i-o-operations-in-r",
+    "href": "Lecture_01.html#b02-i-o-operations-in-r",
+    "title": "1  R & Geodata",
+    "section": "1.2 [B02] I / O operations in R",
+    "text": "1.2 [B02] I / O operations in R\n^ TOP ^\n\nbuilt-in data\n\ndata_function.R\n\ncovid data: openness & remote access\n\ncovid_cases.R\n\nclimate data: interoperability & webAPI\n\nCAR_daily_rainfall.R\n\n(soil / environmental data: see vector & raster data)\nEsercizio\n\nselezionare la colonna delle precipitazioni\nrealizzare un plot delle precipitazioni\ncalcolare il numero di stazioni con precipitazioni superiori o uguali a 2 mm"
+  },
+  {
+    "objectID": "Lecture_01.html#b03-geodata-manipulation-in-r-vector-data-model",
+    "href": "Lecture_01.html#b03-geodata-manipulation-in-r-vector-data-model",
+    "title": "1  R & Geodata",
+    "section": "1.3 [B03] Geodata manipulation in R: vector data model",
+    "text": "1.3 [B03] Geodata manipulation in R: vector data model\n^ TOP ^\n\nSimple Feature Standard (reduced version)\n\nIntroduction to Vector Geospatial Objects and Analysis\n\nexample: create a point geometry from scratch (google maps –> 4326 –> projection)\nimport shapefile / geojson\nexport geojson\n\nSF_readwrite.R\n\nEsercizio\n\nimportare il geodato vettoriale rain_daily.geojson delle precipitazioni in R\nvisualizzare la tabella dati – print() , View() , …\nrealizzare una mappa dei punti geospaziali (usare il colore del simbolo per rappresentare la magnitudine della variabile) – suggerimento: plot() , tm_shape() , …\n\n\n\nReferences Pebesma, Edzer. 2018. “Simple Features for R: Standardized Support for Spatial Vector Data.” The R Journal 10 (1): 439–46. https://doi.org/10.32614/RJ-2018-009."
+  },
+  {
+    "objectID": "Lecture_01.html#b04-data-manipulation-in-r",
+    "href": "Lecture_01.html#b04-data-manipulation-in-r",
+    "title": "1  R & Geodata",
+    "section": "1.4 [B04] Data manipulation in R",
+    "text": "1.4 [B04] Data manipulation in R\n^ TOP ^\n\nCreate a function:\n\ncovid_cases_map.R\n\n\ncovid_casesIncrements_map.R\n\ndplyr (filter, select, aggregate, mutate)\n\nCAR_10m_rainfall.R\n\n\ncheat sheet\n\n\nEsercizio:\n\ninvocare la funzione plot_todayDiff_c19_totcases() per la data 15 Novembre 2021\nselezionare le misure a 10 minuti per la stazione di Avellino Genio Civile dal data.frame r_m10\ncalcolare il totale giornaliero per la stazione di cui al precedente punto\nquanti elementi temporali (10-min) sono stati piovosi per la stazione selezionata?"
+  },
+  {
+    "objectID": "Lecture_01.html#b05-geodata-manipulation-in-r-raster-data-model",
+    "href": "Lecture_01.html#b05-geodata-manipulation-in-r-raster-data-model",
+    "title": "1  R & Geodata",
+    "section": "1.5 [B05] Geodata manipulation in R: raster data model",
+    "text": "1.5 [B05] Geodata manipulation in R: raster data model\n^ TOP ^\n\nraster data model in R (terra package)\n\nRaster Data Model in R\n\nclimate data: interoperability & datacubes\n\none example using either COSMO or ERA5LAND\n\n\n\nEsercizio:\n\nimportare il DEM della Campania\n\npath: /didattica/docente_Langella/Raster-Data/\nfile: dem20m_campania.tif\n\nleggere il valore di quota per il pixel di coordinate matriciali riga=700, colonna=800\nleggere il valore di quota nel punto di coordinate X=460000, Y=4500000\n\nReferences Book: Spatial Data Science, by Pebesma & Bivand"
+  },
+  {
+    "objectID": "Lecture_01.html#b06-eda-variography-in-r",
+    "href": "Lecture_01.html#b06-eda-variography-in-r",
+    "title": "1  R & Geodata",
+    "section": "1.6 [B06] EDA & Variography in R",
+    "text": "1.6 [B06] EDA & Variography in R\n^ TOP ^\n\n*EDA: Exploratory Data Analysis\n\nEDA_&_variography_rainfall.R\n\n\nEsercizio (anche per casa):\n\ngenerare il variogramma sperimentale del cadmio\n\ndataset meuse (dato built-in in R, pacchetto sp)\nscala logaritmica\n\n\n\n\n\n\nAppelhans, Tim, Florian Detsch, Christoph Reudenbach, and Stefan Woellauer. 2022. Mapview: Interactive Viewing of Spatial Data in r. https://github.com/r-spatial/mapview.\n\n\nHijmans, Robert J. 2024. Terra: Spatial Data Analysis. https://rspatial.org/.\n\n\nPebesma, Edzer. 2018. “Simple Features for R: Standardized Support for Spatial Vector Data.” The R Journal 10 (1): 439–46. https://doi.org/10.32614/RJ-2018-009.\n\n\n———. 2023a. Sf: Simple Features for r. https://r-spatial.github.io/sf/.\n\n\n———. 2023b. Stars: Spatiotemporal Arrays, Raster and Vector Data Cubes. https://r-spatial.github.io/stars/.\n\n\nPebesma, Edzer, and Roger Bivand. 2023a. Spatial Data Science: With applications in R. Chapman and Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\n———. 2023b. Spatial Data Science: With applications in R. London: Chapman; Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\nPebesma, Edzer, Thomas Mailund, and James Hiebert. 2016. “Measurement Units in R.” R Journal 8 (2): 486–94. https://doi.org/10.32614/RJ-2016-061.\n\n\nPebesma, Edzer, Thomas Mailund, Tomasz Kalinowski, and Iñaki Ucar. 2023. Units: Measurement Units for r Vectors. https://r-quantities.github.io/units/.\n\n\nR Core Team. 2023. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.R-project.org/.\n\n\nTennekes, Martijn. 2018. “tmap: Thematic Maps in R.” Journal of Statistical Software 84 (6): 1–39. https://doi.org/10.18637/jss.v084.i06.\n\n\n———. 2023. Tmap: Thematic Maps. https://github.com/r-tmap/tmap.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2024. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://ggplot2.tidyverse.org.\n\n\nXie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In Implementing Reproducible Computational Research, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC.\n\n\n———. 2015. Dynamic Documents with R and Knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. https://yihui.org/knitr/.\n\n\n———. 2024. Knitr: A General-Purpose Package for Dynamic Report Generation in r. https://yihui.org/knitr/."
+  },
+  {
+    "objectID": "Lecture_02.html#b01-exploratory-data-analysis-eda",
+    "href": "Lecture_02.html#b01-exploratory-data-analysis-eda",
+    "title": "2  Variography & kriging",
+    "section": "2.1 [B01] Exploratory Data Analysis (EDA)",
+    "text": "2.1 [B01] Exploratory Data Analysis (EDA)\n^ TOP ^\nEDA (Tukey “numerical, counting and graphical detective work”)\nMethodology:\n\nState questions\ndesign experiment\ncollect data (according to (2))\nperfom statistical analysis\nproduce answer\n\n\nHands-on:\n\nCAR_10m_temperature.R\n\n\ncontenuto del dataset, origine dei dati, unità di misura, …\ninformazioni sul campionamento / misura\ndistribuzione dei campioni nel dominio di indagine (es. numero e densità delle osservazioni nello spazio-tempo)\nsintesi statistica del dataset (misure di tendenza centrale e di dispersione)\nrappresentazione grafica dei pattern (univariate: plot, boxplot, histogram, map, …)\ntest di normalità\ntrasformazione dei dati\n\n\nEsercizio, temperatura dell’aria:\n\ncalcolare la mediana\nplot della distribuzione di frequenza\ncalcolare il log e realizzare il plot della distribuzione su scala logaritmica\n\nEsercizio (per casa):\n\ncaricare il dataset built-in meuse\nrealizzare l’analisi esplorativa con particolare riferimento al cadmio\nvalutare una trasformazione del cadmio (sqrt, log, …)\nrappresentare graficamente la distribuzione delle misure di cadmio"
+  },
+  {
+    "objectID": "Lecture_02.html#b02-variography",
+    "href": "Lecture_02.html#b02-variography",
+    "title": "2  Variography & kriging",
+    "section": "2.2 [B02] Variography",
+    "text": "2.2 [B02] Variography\n^ TOP ^\n\nElementi di base dell’analisi variografica:\n\nHow to build a variogram\n\n\npreparazione del geodato (pacchetto sf)\nnube di variogramma (cloud variogram)\nvariogramma sperimentale (experimental variogram)\nfitting con modello di variogramma (variogram model)\n\nHands-on\n\nCAR_10m_temperature.R"
+  },
+  {
+    "objectID": "Lecture_02.html#b03-kriging",
+    "href": "Lecture_02.html#b03-kriging",
+    "title": "2  Variography & kriging",
+    "section": "2.3 [B03] Kriging",
+    "text": "2.3 [B03] Kriging\n^ TOP ^\n\nInterpolazione spaziale mediante kriging:\n\nKriging basic formula\n\n\npreparazione dei punti incogniti\npunto / punti sparsi, base vettoriale\ngrigliato di punti, base raster\ninterpolatore kriging usando il modello di variogramma\n\nHands-on\n\nCAR_10m_temperature.R"
+  },
+  {
+    "objectID": "Lecture_02.html#b04-geostatistical-analysis-of-rainfall",
+    "href": "Lecture_02.html#b04-geostatistical-analysis-of-rainfall",
+    "title": "2  Variography & kriging",
+    "section": "2.4 [B04] Geostatistical Analysis of Rainfall",
+    "text": "2.4 [B04] Geostatistical Analysis of Rainfall\n^ TOP ^\n\nEDA, Variography & Kriging using daily rainfall data\n\nEDA_&_variography_rainfall.R\n\nEsercizio:\n\ngenerare una variabile indicatrice con soglia a 1 mm\ngenerare il variogramma sperimentale su variabile indicatrice\nrealizzare il fitting con modello di variogramma ammissibile\ninterpolazione mediante kriging"
+  },
+  {
+    "objectID": "Lecture_02.html#b05-spatial-interpolation-simple-methods",
+    "href": "Lecture_02.html#b05-spatial-interpolation-simple-methods",
+    "title": "2  Variography & kriging",
+    "section": "2.5 [B05] Spatial interpolation | simple methods",
+    "text": "2.5 [B05] Spatial interpolation | simple methods\n^ TOP ^\nModels of interpolation used in this study:\n\nNULL model\nProximity polygons (Thiessen or Voronoi)\nNearest neighbours\nInverse Distance Weighted\nLinear Model (regression)\nKriging"
+  },
+  {
+    "objectID": "Lecture_02.html#b06-models-comparison-and-selection-strategy",
+    "href": "Lecture_02.html#b06-models-comparison-and-selection-strategy",
+    "title": "2  Variography & kriging",
+    "section": "2.6 [B06] Models comparison and selection strategy",
+    "text": "2.6 [B06] Models comparison and selection strategy\n^ TOP ^\nProcedura per il confronto di modelli e selezione del migliore :\n\nSuddivisione del dataset in training e validation\n\ntraining 60% – 80%\nvalidation 40% – 20%\n\ncostruzione dei modelli con il dataset di training\nvalutazione della performance dei modelli con il dataset di validation\nconfronto dei modelli mediante uno o più indicatori\nselezione del migliore modello\n\n\n\n\n\n\n\n\nTip\n\n\n\nIn geostatistica è possibile valutare la performance del modello mediante la L-1-O (leave one out) cross-validation.\n\n\n\n\n\n\nAppelhans, Tim, Florian Detsch, Christoph Reudenbach, and Stefan Woellauer. 2022. Mapview: Interactive Viewing of Spatial Data in r. https://github.com/r-spatial/mapview.\n\n\nHijmans, Robert J. 2024. Terra: Spatial Data Analysis. https://rspatial.org/.\n\n\nPebesma, Edzer. 2018. “Simple Features for R: Standardized Support for Spatial Vector Data.” The R Journal 10 (1): 439–46. https://doi.org/10.32614/RJ-2018-009.\n\n\n———. 2023a. Sf: Simple Features for r. https://r-spatial.github.io/sf/.\n\n\n———. 2023b. Stars: Spatiotemporal Arrays, Raster and Vector Data Cubes. https://r-spatial.github.io/stars/.\n\n\nPebesma, Edzer, and Roger Bivand. 2023a. Spatial Data Science: With applications in R. Chapman and Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\n———. 2023b. Spatial Data Science: With applications in R. London: Chapman; Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\nPebesma, Edzer, Thomas Mailund, and James Hiebert. 2016. “Measurement Units in R.” R Journal 8 (2): 486–94. https://doi.org/10.32614/RJ-2016-061.\n\n\nPebesma, Edzer, Thomas Mailund, Tomasz Kalinowski, and Iñaki Ucar. 2023. Units: Measurement Units for r Vectors. https://r-quantities.github.io/units/.\n\n\nR Core Team. 2023. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing. https://www.R-project.org/.\n\n\nTennekes, Martijn. 2018. “tmap: Thematic Maps in R.” Journal of Statistical Software 84 (6): 1–39. https://doi.org/10.18637/jss.v084.i06.\n\n\n———. 2023. Tmap: Thematic Maps. https://github.com/r-tmap/tmap.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, and Teun van den Brand. 2024. Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. https://ggplot2.tidyverse.org.\n\n\nXie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible Research in R.” In Implementing Reproducible Computational Research, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC.\n\n\n———. 2015. Dynamic Documents with R and Knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. https://yihui.org/knitr/.\n\n\n———. 2024. Knitr: A General-Purpose Package for Dynamic Report Generation in r. https://yihui.org/knitr/."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Appelhans, Tim, Florian Detsch, Christoph Reudenbach, and Stefan\nWoellauer. 2022. Mapview: Interactive Viewing of Spatial Data in\nr. https://github.com/r-spatial/mapview.\n\n\nHijmans, Robert J. 2024. Terra: Spatial Data Analysis. https://rspatial.org/.\n\n\nPebesma, Edzer. 2018. “Simple Features for R:\nStandardized Support for Spatial Vector Data.”\nThe R Journal 10 (1): 439–46. https://doi.org/10.32614/RJ-2018-009.\n\n\n———. 2023a. Sf: Simple Features for r. https://r-spatial.github.io/sf/.\n\n\n———. 2023b. Stars: Spatiotemporal Arrays, Raster and Vector Data\nCubes. https://r-spatial.github.io/stars/.\n\n\nPebesma, Edzer, and Roger Bivand. 2023a. Spatial Data Science: With applications in R.\nChapman and Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\n———. 2023b. Spatial Data Science: With\napplications in R. London: Chapman; Hall/CRC. https://doi.org/10.1201/9780429459016.\n\n\nPebesma, Edzer, Thomas Mailund, and James Hiebert. 2016.\n“Measurement Units in R.” R Journal 8\n(2): 486–94. https://doi.org/10.32614/RJ-2016-061.\n\n\nPebesma, Edzer, Thomas Mailund, Tomasz Kalinowski, and Iñaki Ucar. 2023.\nUnits: Measurement Units for r Vectors. https://r-quantities.github.io/units/.\n\n\nR Core Team. 2023. R: A Language and Environment for Statistical\nComputing. Vienna, Austria: R Foundation for Statistical Computing.\nhttps://www.R-project.org/.\n\n\nTennekes, Martijn. 2018. “tmap:\nThematic Maps in R.” Journal of Statistical\nSoftware 84 (6): 1–39. https://doi.org/10.18637/jss.v084.i06.\n\n\n———. 2023. Tmap: Thematic Maps. https://github.com/r-tmap/tmap.\n\n\nWickham, Hadley. 2016. Ggplot2: Elegant Graphics for Data\nAnalysis. Springer-Verlag New York. https://ggplot2.tidyverse.org.\n\n\nWickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen,\nKohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey\nDunnington, and Teun van den Brand. 2024. Ggplot2: Create Elegant\nData Visualisations Using the Grammar of Graphics. https://ggplot2.tidyverse.org.\n\n\nXie, Yihui. 2014. “Knitr: A Comprehensive Tool for Reproducible\nResearch in R.” In Implementing Reproducible\nComputational Research, edited by Victoria Stodden, Friedrich\nLeisch, and Roger D. Peng. Chapman; Hall/CRC.\n\n\n———. 2015. Dynamic Documents with R and Knitr. 2nd\ned. Boca Raton, Florida: Chapman; Hall/CRC. https://yihui.org/knitr/.\n\n\n———. 2024. Knitr: A General-Purpose Package for Dynamic Report\nGeneration in r. https://yihui.org/knitr/."
+  }
+]
